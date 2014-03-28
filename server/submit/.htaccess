@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "gpstracking submit"
+AuthUserFile ./.htusers
+Require valid-user
