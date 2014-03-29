@@ -1,4 +1,4 @@
 gpstracking
 ===========
 
-GPS tracking system
+GPS tracking system (server and clients)
