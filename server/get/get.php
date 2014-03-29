@@ -28,23 +28,24 @@ if(!isset($_GET['mode'])) {
 	// get all tracking devices
 	$result = mysql_query("select distinct name from $mysql_table;");
 
-	// create form for tracking device selection
-	echo '<form action="get.php" method="get">';
-
-	echo '<label>Available tracking devices:</label><br />';
-	echo '<select name="trackingdevice">';
+	echo '<table border="0">';
+	echo '<tr>';
+	echo '<td>';
+	echo '<b>Tracking Device:</b>';
+	echo '</td>';
+	echo '</tr>';
+	// create list of tracking devices
 	while($row = mysql_fetch_array($result)) {
-		echo '<option value="' . $row["name"] . '">' 
-			. $row["name"] . '</option>';
+		echo '<tr>';
+		echo '<td>';
+		echo '<a href="get.php?mode=timeselect&trackingdevice=' . htmlentities($row["name"], ENT_QUOTES) . '">';
+		echo htmlentities($row["name"], ENT_QUOTES);
+		echo '</a>';
+		echo '</td>';
+		echo '</tr>';
 	}
-	echo '</select>';
-	echo '<input type="hidden" name="mode" value="timeselect" />';
+	echo '</table>';
 
-	echo '<hr />';
-
-	echo '<input type="submit" value="enter" />';
-	echo '<input type="reset" value="clear" />';
-	echo '</form>';
 }
 else {
 	switch($_GET['mode']) {
