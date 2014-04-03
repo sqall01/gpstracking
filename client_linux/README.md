@@ -1,4 +1,4 @@
-GPS tracking system linux client
+GPS tracking system Linux client
 ===========
 
 This is a linux client for the GPS tracking system written in Python. It will track the movement of the client by gathering GPS data in a given interval. The client will store the gathered data locally until it is able to send it to the GPS tracking server. HTTPS is used for the transmission in order to protect the data.
