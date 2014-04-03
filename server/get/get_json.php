@@ -48,6 +48,7 @@ switch($_GET['mode']) {
 			// check if no newer entry exists
 			if($row == null) {
 				// output empty json objects
+				header('Content-type: application/json');
 				echo "{}";
 			}
 			else {
@@ -60,6 +61,7 @@ switch($_GET['mode']) {
 					"speed" => $row["speed"]);
 
 				// output entry as a json object
+				header('Content-type: application/json');
 				echo json_encode($output);
 			}
 		}
@@ -109,6 +111,7 @@ switch($_GET['mode']) {
 			}
 
 			// output array as a json object
+			header('Content-type: application/json');
 			echo json_encode($output);
 		}
 
