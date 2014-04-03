@@ -2,7 +2,7 @@
 
 # written by sqall
 # twitter: https://twitter.com/sqall01
-# blog: http://blog.h4des.org)
+# blog: http://blog.h4des.org
 # 
 # Licensed under the GNU Public License, version 2.
 
