@@ -72,7 +72,7 @@ if __name__ == '__main__':
 		datefmt='%m/%d/%Y %H:%M:%S', filename=logfile, level=loglevel)
 
 	# initialize file lock variable
-	filelock = threading.Lock()
+	filelock = threading.Semaphore(1)
 
 	# check temp file exists
 	if not os.path.exists(tempfile):

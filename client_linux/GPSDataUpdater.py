@@ -37,7 +37,7 @@ class GPSDataUpdater(threading.Thread):
 		self.speed = None
 
 		# initialize lock for data acess
-		self.accessdatalock = threading.Lock()
+		self.accessdatalock = threading.Semaphore(1)
 
 		# set thread to daemon
 		threading.daemon = True
