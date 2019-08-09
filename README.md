@@ -1,3 +1,8 @@
+Important Note
+===========
+
+This is a very old project that contains tones of old code structures. The project was completely rewritten and is available at its own [Github Repository](https://github.com/sqall01/chasr-server). Furthermore, the rewritten project also contains Android Apps.
+
 GPS tracking system (server and clients)
 ===========
 
